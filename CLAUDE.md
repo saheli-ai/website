@@ -50,6 +50,15 @@ public/          # favicon.png, images/, robots.txt
 | `/support` | FAQ + contact info (App Store support URL) |
 | `/terms` | Terms & conditions |
 
+## Verification Workflow
+
+After every meaningful UI change, visually verify using `agent-browser`:
+1. Start dev server (`npm run dev`) if not running
+2. Open page with `agent-browser open http://localhost:4321`
+3. Screenshot and inspect the changed section
+4. Scroll/navigate to confirm surrounding sections are unaffected
+5. Only then report the change as complete
+
 ## Key Notes
 
 - Site URL configured as `https://chitti.me` in `astro.config.mjs`
