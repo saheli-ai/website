@@ -1,0 +1,73 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t border-white/5 bg-bg-dark">
+  <div class="mx-auto max-w-6xl px-6 py-16">
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- Brand -->
+      <div class="sm:col-span-2 lg:col-span-1">
+        <a href="/" class="flex items-center gap-2.5">
+          <img src="/images/app-icon.png" alt="Chitti" class="h-9 w-9 rounded-xl" />
+          <span class="font-display text-xl font-bold text-white">Chitti</span>
+        </a>
+        <p class="mt-4 text-sm leading-relaxed text-white/40">
+          Your personal AI beauty companion. Private, emotionally safe appearance feedback you can trust.
+        </p>
+      </div>
+
+      <!-- Product -->
+      <div>
+        <h3 class="mb-4 text-xs font-semibold uppercase tracking-widest text-white/50">Product</h3>
+        <ul class="space-y-3">
+          <li><a href="/#features" class="text-sm text-white/40 transition-colors hover:text-primary-light">Features</a></li>
+          <li><a href="/#how-it-works" class="text-sm text-white/40 transition-colors hover:text-primary-light">How It Works</a></li>
+          <li><a href="/blog" class="text-sm text-white/40 transition-colors hover:text-primary-light">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h3 class="mb-4 text-xs font-semibold uppercase tracking-widest text-white/50">Company</h3>
+        <ul class="space-y-3">
+          <li><a href="/about" class="text-sm text-white/40 transition-colors hover:text-primary-light">About</a></li>
+          <li><a href="/support" class="text-sm text-white/40 transition-colors hover:text-primary-light">Support</a></li>
+          <li><a href="/privacy" class="text-sm text-white/40 transition-colors hover:text-primary-light">Privacy Policy</a></li>
+          <li><a href="/terms" class="text-sm text-white/40 transition-colors hover:text-primary-light">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- Download -->
+      <div>
+        <h3 class="mb-4 text-xs font-semibold uppercase tracking-widest text-white/50">Download</h3>
+        <div class="flex flex-col gap-3">
+          <a
+            href="#"
+            class="inline-flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-white/70 transition-all hover:border-white/20 hover:bg-white/10 hover:text-white"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+            </svg>
+            App Store
+          </a>
+          <a
+            href="#"
+            class="inline-flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-white/70 transition-all hover:border-white/20 hover:bg-white/10 hover:text-white"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.292 12l2.406-2.492zM5.864 2.658L16.8 9.008l-2.302 2.302L5.864 2.658z"/>
+            </svg>
+            Play Store
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="mt-16 border-t border-white/5 pt-8 text-center">
+      <p class="text-sm text-white/25">
+        &copy; {currentYear} Chitti. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

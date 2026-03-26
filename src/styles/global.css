@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@theme {
+  /* Core palette — richer, more vibrant */
+  --color-primary: #4AB89A;
+  --color-primary-light: #5ED4B5;
+  --color-primary-dark: #3A9A7E;
+  --color-accent: #D4A494;
+  --color-accent-dark: #C98B78;
+  --color-accent-light: #E8C4B8;
+
+  /* Prismatic highlights (matching the app icon) */
+  --color-iris: #8B7EC8;
+  --color-rose: #E88BA7;
+  --color-gold: #E8C468;
+  --color-sky: #68B8E8;
+
+  /* Backgrounds */
+  --color-bg-mint: #F2F7F4;
+  --color-bg-cream: #F7F3F0;
+  --color-bg-blush: #F0E8E3;
+  --color-bg-dark: #0F1419;
+  --color-bg-dark-card: #1A1F26;
+
+  /* Text */
+  --color-text: #1A1A2E;
+  --color-text-light: #64748B;
+  --color-text-muted: #94A3B8;
+
+  /* Typography */
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Bricolage Grotesque', ui-serif, Georgia, serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade-in animation */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.animate-fade-up-delay-1 {
+  animation: fade-up 0.7s ease-out 0.1s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.7s ease-out 0.2s both;
+}
+
+.animate-fade-up-delay-3 {
+  animation: fade-up 0.7s ease-out 0.3s both;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Gradient text helper */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism card */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(26, 31, 38, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Prose overrides for blog */
+.prose-chitti h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-chitti h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-chitti p {
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.prose-chitti strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.prose-chitti ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose-chitti li {
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 0.25rem;
+}
+
+.prose-chitti a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-color: rgba(74, 184, 154, 0.3);
+  transition: text-decoration-color 0.2s;
+}
+
+.prose-chitti a:hover {
+  text-decoration-color: var(--color-primary);
+}

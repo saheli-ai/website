@@ -1,0 +1,104 @@
+---
+const navLinks = [
+  { label: 'Features', href: '/#features' },
+  { label: 'How It Works', href: '/#how-it-works' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'About', href: '/about' },
+];
+---
+
+<header id="site-header" class="fixed top-0 z-50 w-full transition-all duration-300">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2.5">
+      <img src="/images/app-icon.png" alt="Chitti" class="h-9 w-9 rounded-xl shadow-sm" />
+      <span class="font-display text-xl font-bold text-white transition-colors" id="logo-text">Chitti</span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <div class="hidden items-center gap-8 md:flex">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class="nav-link text-sm font-medium text-white/60 transition-colors hover:text-white"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href="#download"
+        class="rounded-full bg-gradient-to-r from-primary to-primary-dark px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
+      >
+        Download
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button
+      id="mobile-menu-btn"
+      class="flex items-center justify-center rounded-lg p-2 text-white/60 transition-colors hover:text-white md:hidden"
+      aria-label="Toggle menu"
+    >
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-menu" class="hidden border-t border-white/10 bg-bg-dark/95 backdrop-blur-xl md:hidden">
+    <div class="flex flex-col gap-1 px-6 py-4">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class="rounded-lg px-3 py-2.5 text-sm font-medium text-white/60 transition-colors hover:bg-white/5 hover:text-white"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href="#download"
+        class="mt-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-5 py-2.5 text-center text-sm font-semibold text-white"
+      >
+        Download
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+
+  // Header scroll effect: transparent → frosted glass
+  const header = document.getElementById('site-header');
+  const logoText = document.getElementById('logo-text');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  function updateHeader() {
+    if (!header) return;
+    const scrolled = window.scrollY > 80;
+    if (scrolled) {
+      header.classList.add('bg-white/90', 'backdrop-blur-xl', 'shadow-sm');
+      header.classList.remove('bg-transparent');
+      logoText?.classList.replace('text-white', 'text-text');
+      navLinks.forEach(l => {
+        l.classList.replace('text-white/60', 'text-text-light');
+        l.classList.replace('hover:text-white', 'hover:text-primary');
+      });
+    } else {
+      header.classList.remove('bg-white/90', 'backdrop-blur-xl', 'shadow-sm');
+      header.classList.add('bg-transparent');
+      logoText?.classList.replace('text-text', 'text-white');
+      navLinks.forEach(l => {
+        l.classList.replace('text-text-light', 'text-white/60');
+        l.classList.replace('hover:text-primary', 'hover:text-white');
+      });
+    }
+  }
+
+  updateHeader();
+  window.addEventListener('scroll', updateHeader, { passive: true });
+</script>

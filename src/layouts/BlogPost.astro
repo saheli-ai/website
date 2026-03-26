@@ -1,0 +1,62 @@
+---
+import PageLayout from './PageLayout.astro';
+
+interface Props {
+  frontmatter: {
+    title: string;
+    description: string;
+    pubDate: Date;
+    author: string;
+    image?: string;
+    tags: string[];
+  };
+}
+
+const { frontmatter } = Astro.props;
+const formattedDate = frontmatter.pubDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<PageLayout title={`${frontmatter.title} — Chitti Blog`} description={frontmatter.description}>
+  <article class="py-24 sm:py-32">
+    <div class="mx-auto max-w-3xl px-6">
+      <!-- Header -->
+      <header class="mb-12">
+        <div class="mb-4 flex flex-wrap items-center gap-3 text-sm text-text-muted">
+          <time datetime={frontmatter.pubDate.toISOString()}>{formattedDate}</time>
+          <span>&middot;</span>
+          <span>{frontmatter.author}</span>
+        </div>
+        <h1 class="font-display text-3xl font-extrabold tracking-tight text-text sm:text-4xl lg:text-5xl">
+          {frontmatter.title}
+        </h1>
+        <p class="mt-4 text-lg text-text-light">{frontmatter.description}</p>
+        {frontmatter.tags.length > 0 && (
+          <div class="mt-6 flex flex-wrap gap-2">
+            {frontmatter.tags.map((tag) => (
+              <span class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary-dark">
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </header>
+
+      <!-- Content -->
+      <div class="prose-chitti">
+        <slot />
+      </div>
+
+      <!-- Back link -->
+      <div class="mt-16 border-t border-black/5 pt-8">
+        <a href="/blog" class="inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-primary-dark">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+          Back to all posts
+        </a>
+      </div>
+    </div>
+  </article>
+</PageLayout>
