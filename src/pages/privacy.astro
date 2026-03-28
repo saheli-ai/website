@@ -56,7 +56,7 @@ import PageLayout from '../layouts/PageLayout.astro';
               <span class="mt-1 text-primary">&#8226;</span>
               <span><strong class="text-text">Photos and images (including face data):</strong> Photos you submit for analysis may contain facial imagery. How long a photo is retained depends on the feature you use:<br /><br />
                 <strong class="text-text">Vibe Check:</strong> Photos are processed in real-time and are <strong class="text-text">not stored</strong>. The image is sent directly to OpenAI for analysis and is not uploaded to our servers or retained after the analysis is complete.<br /><br />
-                <strong class="text-text">Skin Analysis:</strong> Photos (front, left, and right angles) are uploaded to our secure storage and retained <strong class="text-text">for the duration of your account</strong> so you can view past analyses and track changes over time. When you delete your account, all skin analysis images are permanently deleted.<br /><br />
+                <strong class="text-text">Skin Analysis:</strong> Photos are processed in real-time and are <strong class="text-text">not stored</strong>. The image is sent for analysis and is not retained on our servers after the analysis is complete.<br /><br />
                 <strong class="text-text">Makeup Analysis:</strong> Photos submitted for makeup analysis are stored securely for up to <strong class="text-text">7 days</strong> to support the analysis workflow, after which they are automatically and permanently deleted.<br /><br />
                 In all cases, images are encrypted at rest and accessible only to your account. No facial geometry, faceprints, or biometric identifiers are extracted or stored. We do not use face data to identify you or any other person. Face data is used solely to analyse skin tone, skin condition, hair characteristics, and makeup application in order to provide you with personalised beauty recommendations.</span>
             </li>
@@ -91,7 +91,7 @@ import PageLayout from '../layouts/PageLayout.astro';
             </li>
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#8226;</span>
-              <span><strong class="text-text">How we use face data:</strong> Face data is used <strong class="text-text">exclusively</strong> to analyse your skin condition, skin tone, hair characteristics, and makeup application so the Service can generate personalised beauty and skincare recommendations. Skin Analysis photos are additionally retained so you can review past results and track changes over time. Face data is never used for facial recognition, identification of individuals, advertising, profiling, or any purpose other than providing you with beauty analysis you explicitly requested.</span>
+              <span><strong class="text-text">How we use face data:</strong> Face data is used <strong class="text-text">exclusively</strong> to analyse your skin condition, skin tone, hair characteristics, and makeup application so the Service can generate personalised beauty and skincare recommendations. Face data is never used for facial recognition, identification of individuals, advertising, profiling, or any purpose other than providing you with beauty analysis you explicitly requested.</span>
             </li>
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#8226;</span>
@@ -101,7 +101,7 @@ import PageLayout from '../layouts/PageLayout.astro';
               <span class="mt-1 text-primary">&#8226;</span>
               <span><strong class="text-text">Face data retention:</strong> Retention of photos containing face data varies by feature:<br /><br />
                 — <strong class="text-text">Vibe Check:</strong> Photos are <strong class="text-text">not stored</strong>. The image is processed in real-time and is not retained by Chitti or OpenAI after the analysis is complete.<br />
-                — <strong class="text-text">Skin Analysis:</strong> Photos are stored on our secure, encrypted infrastructure for the <strong class="text-text">duration of your account</strong> to enable you to review past analyses and track skin changes over time. Photos are permanently deleted when you delete your account.<br />
+                — <strong class="text-text">Skin Analysis:</strong> Photos are <strong class="text-text">not stored</strong>. The image is processed in real-time for analysis and is not retained on our servers after the analysis is complete.<br />
                 — <strong class="text-text">Makeup Analysis:</strong> Photos are stored on our secure, encrypted infrastructure for up to <strong class="text-text">7 days</strong> to support the analysis workflow, after which they are automatically and permanently deleted.<br /><br />
                 In all cases, stored images are encrypted at rest using AES-256 encryption, accessible only to your account through row-level security policies, and transmitted exclusively over encrypted connections (TLS 1.3). OpenAI does not store or retain any photos or face data beyond the immediate processing of each individual analysis request.</span>
             </li>
@@ -111,7 +111,7 @@ import PageLayout from '../layouts/PageLayout.astro';
             </li>
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#8226;</span>
-              <span><strong class="text-text">Retention period summary:</strong> For Vibe Check, face data is retained only for the duration of the analysis request — typically a matter of seconds — after which it is permanently discarded. For Skin Analysis, photos are retained for the duration of your account and are permanently deleted upon account deletion. For Makeup Analysis, photos are retained for up to 7 days, after which they are automatically and permanently deleted. Face data is never stored indefinitely without a specific, stated purpose, and all retained images are protected by strong encryption and strict access controls.</span>
+              <span><strong class="text-text">Retention period summary:</strong> For Vibe Check, face data is retained only for the duration of the analysis request — typically a matter of seconds — after which it is permanently discarded. For Skin Analysis, photos are processed in real-time and not retained — the image is deleted immediately after analysis is complete. For Makeup Analysis, photos are retained for up to 7 days, after which they are automatically and permanently deleted. Face data is never stored indefinitely without a specific, stated purpose, and all retained images are protected by strong encryption and strict access controls.</span>
             </li>
           </ul>
         </div>
@@ -191,7 +191,7 @@ import PageLayout from '../layouts/PageLayout.astro';
                 — OpenAI is contractually prohibited from sharing your data with any other party.<br />
                 — All data submitted through our Service falls under OpenAI's zero-data-retention API policy.<br />
                 — OpenAI is required to maintain security protections equivalent to or exceeding those described in this policy.<br /><br />
-                Note: For Skin Analysis, Chitti stores your photos securely on our own encrypted infrastructure for the duration of your account to enable historical tracking. For Makeup Analysis, Chitti stores your photos securely for up to 7 days on our own encrypted infrastructure to support the analysis workflow. In both cases, OpenAI does not retain images beyond each individual processing request.</span>
+                Note: For Skin Analysis, photos are not stored — they are deleted immediately after analysis. For Makeup Analysis, Chitti stores your photos securely for up to 7 days on our own encrypted infrastructure to support the analysis workflow. In both cases, OpenAI does not retain images beyond each individual processing request.</span>
             </li>
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#8226;</span>
@@ -227,7 +227,7 @@ import PageLayout from '../layouts/PageLayout.astro';
             </li>
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#10003;</span>
-              <span><strong class="text-text">Automatic deletion:</strong> Makeup Analysis photos are automatically and permanently deleted after 7 days. Vibe Check photos are never stored. These deletion processes are automated and require no action from you.</span>
+              <span><strong class="text-text">Automatic deletion:</strong> Makeup Analysis photos are automatically and permanently deleted after 7 days. Vibe Check and Skin Analysis photos are never stored. These deletion processes are automated and require no action from you.</span>
             </li>
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#10003;</span>
@@ -251,7 +251,7 @@ import PageLayout from '../layouts/PageLayout.astro';
           <ul class="mt-3 space-y-2 text-text-light">
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#8226;</span>
-              <span><strong class="text-text">Photos and face data:</strong> Retention varies by feature. For Vibe Check, photos are processed in real-time and not retained. For Skin Analysis, photos are retained for the duration of your account to enable historical tracking and are permanently deleted upon account deletion. For Makeup Analysis, photos are stored securely for up to 7 days, after which they are automatically and permanently deleted. OpenAI does not retain photos or face data beyond each individual processing request in any case.</span>
+              <span><strong class="text-text">Photos and face data:</strong> Retention varies by feature. For Vibe Check, photos are processed in real-time and not retained. For Skin Analysis, photos are processed in real-time and not retained — the image is deleted immediately after analysis is complete. For Makeup Analysis, photos are stored securely for up to 7 days, after which they are automatically and permanently deleted. OpenAI does not retain photos or face data beyond each individual processing request in any case.</span>
             </li>
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#8226;</span>
@@ -326,7 +326,7 @@ import PageLayout from '../layouts/PageLayout.astro';
             </li>
           </ul>
           <p class="mt-3 leading-relaxed text-text-light">
-            Note: For Vibe Check, photos are never stored, so there is no photo data to delete. For Skin Analysis, all stored photos are permanently deleted as part of account deletion. For Makeup Analysis, any photos still within the 7-day retention window are permanently deleted immediately upon account deletion. Aggregated, de-identified usage data that cannot be linked to you may be retained for service improvement purposes.
+            Note: For Vibe Check and Skin Analysis, photos are never stored, so there is no photo data to delete. For Makeup Analysis, any photos still within the 7-day retention window are permanently deleted immediately upon account deletion. Aggregated, de-identified usage data that cannot be linked to you may be retained for service improvement purposes.
           </p>
           <p class="mt-3 leading-relaxed text-text-light">
             If you are unable to access the app, you may also request account deletion by emailing <a href="mailto:chitti.connect@gmail.com" class="font-medium text-primary underline decoration-primary/30 hover:decoration-primary">chitti.connect@gmail.com</a> from the phone number or email associated with your account.
