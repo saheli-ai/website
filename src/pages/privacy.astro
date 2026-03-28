@@ -7,15 +7,36 @@ import PageLayout from '../layouts/PageLayout.astro';
   <section class="py-24 sm:py-32">
     <div class="mx-auto max-w-3xl px-6">
       <h1 class="text-4xl font-extrabold tracking-tight text-text">Privacy Policy</h1>
-      <p class="mt-4 text-text-light">Last updated: March 2026</p>
+      <p class="mt-4 text-text-light">Last updated: 28 March 2026</p>
 
       <div class="prose-policy mt-12 space-y-10">
 
         <div>
           <h2 class="text-xl font-bold text-text">Our Privacy Promise</h2>
           <p class="mt-3 leading-relaxed text-text-light">
-            Chitti is built with privacy at its core. We believe your appearance data is deeply personal, and we treat it that way. This Privacy Policy explains how we collect, use, share, and protect your personal information when you use the Chitti mobile application and related services (collectively, the "Service").
+            Chitti is built with privacy at its core. Your photos, your face, and your appearance data are deeply personal — and we treat them with the highest level of care and protection. We will never use your images or face data to identify you, build profiles on you, or for any purpose other than giving you the beauty analysis you asked for. This Privacy Policy explains how we collect, use, share, and protect your personal information when you use the Chitti mobile application and related services (collectively, the "Service").
           </p>
+          <p class="mt-3 leading-relaxed text-text-light font-medium text-text">
+            Here is what we will never do with your data:
+          </p>
+          <ul class="mt-3 space-y-2 text-text-light">
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#10007;</span>
+              <span>We will <strong class="text-text">never</strong> use your photos or face data for facial recognition or to identify you or anyone else.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#10007;</span>
+              <span>We will <strong class="text-text">never</strong> sell, licence, or share your photos with advertisers, data brokers, or any third party for marketing purposes.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#10007;</span>
+              <span>Your photos and face data are <strong class="text-text">never</strong> used to train any AI or machine learning model — not ours, not OpenAI's, not anyone's.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#10007;</span>
+              <span>We will <strong class="text-text">never</strong> extract, store, or create biometric identifiers, faceprints, or facial geometry from your images.</span>
+            </li>
+          </ul>
           <p class="mt-3 leading-relaxed text-text-light">
             By using the Service, you agree to the collection and use of information in accordance with this policy.
           </p>
@@ -33,11 +54,15 @@ import PageLayout from '../layouts/PageLayout.astro';
             </li>
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#8226;</span>
-              <span><strong class="text-text">Photos and images:</strong> Photos you submit for skin or hair analysis. These are processed in real-time and are <strong class="text-text">not permanently stored</strong> on our servers. We use short-lived, time-expiring URLs for image processing — no raw image data is retained after analysis is complete.</span>
+              <span><strong class="text-text">Photos and images (including face data):</strong> Photos you submit for analysis may contain facial imagery. How long a photo is retained depends on the feature you use:<br /><br />
+                <strong class="text-text">Vibe Check:</strong> Photos are processed in real-time and are <strong class="text-text">not stored</strong>. The image is sent directly to OpenAI for analysis and is not uploaded to our servers or retained after the analysis is complete.<br /><br />
+                <strong class="text-text">Skin Analysis:</strong> Photos (front, left, and right angles) are uploaded to our secure storage and retained <strong class="text-text">for the duration of your account</strong> so you can view past analyses and track changes over time. When you delete your account, all skin analysis images are permanently deleted.<br /><br />
+                <strong class="text-text">Makeup Analysis:</strong> Photos submitted for makeup analysis are stored securely for up to <strong class="text-text">7 days</strong> to support the analysis workflow, after which they are automatically and permanently deleted.<br /><br />
+                In all cases, images are encrypted at rest and accessible only to your account. No facial geometry, faceprints, or biometric identifiers are extracted or stored. We do not use face data to identify you or any other person. Face data is used solely to analyse skin tone, skin condition, hair characteristics, and makeup application in order to provide you with personalised beauty recommendations.</span>
             </li>
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#8226;</span>
-              <span><strong class="text-text">Conversation history:</strong> Your chat interactions with AI specialists, stored securely so you can revisit past feedback and recommendations.</span>
+              <span><strong class="text-text">Conversation history:</strong> Your text-based chat interactions with AI specialists, stored securely so you can revisit past feedback and recommendations. This may include the AI-generated text analysis results derived from your photos, but not the photos themselves.</span>
             </li>
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#8226;</span>
@@ -55,6 +80,43 @@ import PageLayout from '../layouts/PageLayout.astro';
         </div>
 
         <div>
+          <h2 class="text-xl font-bold text-text">Face Data</h2>
+          <p class="mt-3 leading-relaxed text-text-light">
+            Your face is uniquely yours, and we treat photos containing it with the highest level of protection. Chitti's analysis features may process photos that contain your face — but only to help you with beauty and skincare. <strong class="text-text">Your face data is never used for identification, surveillance, profiling, or AI model training under any circumstances.</strong>
+          </p>
+          <ul class="mt-3 space-y-2 text-text-light">
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#8226;</span>
+              <span><strong class="text-text">What face data we collect:</strong> When you submit a photo for analysis, the image may contain facial features such as skin tone, skin texture, and facial structure. We <strong class="text-text">do not</strong> extract, compute, or store facial geometry, faceprints, biometric templates, or any form of biometric identifier. No facial recognition technology is used at any point in our pipeline.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#8226;</span>
+              <span><strong class="text-text">How we use face data:</strong> Face data is used <strong class="text-text">exclusively</strong> to analyse your skin condition, skin tone, hair characteristics, and makeup application so the Service can generate personalised beauty and skincare recommendations. Skin Analysis photos are additionally retained so you can review past results and track changes over time. Face data is never used for facial recognition, identification of individuals, advertising, profiling, or any purpose other than providing you with beauty analysis you explicitly requested.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#8226;</span>
+              <span><strong class="text-text">Zero training guarantee:</strong> Your photos and face data are <strong class="text-text">never used to train, fine-tune, or improve any AI or machine learning model</strong> — whether owned by Chitti, OpenAI, or any other party. We use OpenAI's API under a contractual agreement that explicitly prohibits OpenAI from using any data submitted through our Service for model training, improvement, or any purpose other than generating your requested analysis. This protection applies to all data sent through our Service, including photos, face data, and text.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#8226;</span>
+              <span><strong class="text-text">Face data retention:</strong> Retention of photos containing face data varies by feature:<br /><br />
+                — <strong class="text-text">Vibe Check:</strong> Photos are <strong class="text-text">not stored</strong>. The image is processed in real-time and is not retained by Chitti or OpenAI after the analysis is complete.<br />
+                — <strong class="text-text">Skin Analysis:</strong> Photos are stored on our secure, encrypted infrastructure for the <strong class="text-text">duration of your account</strong> to enable you to review past analyses and track skin changes over time. Photos are permanently deleted when you delete your account.<br />
+                — <strong class="text-text">Makeup Analysis:</strong> Photos are stored on our secure, encrypted infrastructure for up to <strong class="text-text">7 days</strong> to support the analysis workflow, after which they are automatically and permanently deleted.<br /><br />
+                In all cases, stored images are encrypted at rest using AES-256 encryption, accessible only to your account through row-level security policies, and transmitted exclusively over encrypted connections (TLS 1.3). OpenAI does not store or retain any photos or face data beyond the immediate processing of each individual analysis request.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#8226;</span>
+              <span><strong class="text-text">Third-party sharing of face data:</strong> Photos containing face data are transmitted to <strong class="text-text">OpenAI</strong> solely for the purpose of generating your analysis result. OpenAI processes the image in real-time and <strong class="text-text">does not store, retain, log, or use</strong> the face data for any other purpose — including training AI models, improving their services, or sharing with any other party. Under our contractual agreement with OpenAI, all data submitted through our Service is processed under OpenAI's zero-data-retention policy and is permanently discarded after the analysis response is generated. No other third party receives your face data under any circumstances.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#8226;</span>
+              <span><strong class="text-text">Retention period summary:</strong> For Vibe Check, face data is retained only for the duration of the analysis request — typically a matter of seconds — after which it is permanently discarded. For Skin Analysis, photos are retained for the duration of your account and are permanently deleted upon account deletion. For Makeup Analysis, photos are retained for up to 7 days, after which they are automatically and permanently deleted. Face data is never stored indefinitely without a specific, stated purpose, and all retained images are protected by strong encryption and strict access controls.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
           <h2 class="text-xl font-bold text-text">How We Use Your Information</h2>
           <p class="mt-3 leading-relaxed text-text-light">
             We use the information we collect to:
@@ -63,6 +125,10 @@ import PageLayout from '../layouts/PageLayout.astro';
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#8226;</span>
               <span>Provide, operate, and maintain the Service, including AI-powered skin and hair analysis.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#8226;</span>
+              <span>Transmit your photos to OpenAI for real-time analysis in order to generate personalised beauty and skincare recommendations.</span>
             </li>
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#8226;</span>
@@ -84,61 +150,128 @@ import PageLayout from '../layouts/PageLayout.astro';
         </div>
 
         <div>
-          <h2 class="text-xl font-bold text-text">Third-Party Service Providers</h2>
+          <h2 class="text-xl font-bold text-text">User Consent for Data Sharing</h2>
           <p class="mt-3 leading-relaxed text-text-light">
-            We work with trusted third-party service providers to deliver and support the Service. These providers are contractually bound to use your data only for the purposes we specify and in accordance with this Privacy Policy. They include:
+            Before your data is shared with any third-party service provider, the app will clearly inform you of the following and request your explicit consent:
           </p>
           <ul class="mt-3 space-y-2 text-text-light">
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#8226;</span>
-              <span><strong class="text-text">Cloud infrastructure and database providers</strong> — for secure data storage and authentication with industry-standard access controls.</span>
+              <span><strong class="text-text">What data is sent:</strong> When you submit a photo for analysis, the image (which may contain facial imagery) along with any accompanying text context you provide is transmitted to OpenAI.</span>
             </li>
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#8226;</span>
-              <span><strong class="text-text">AI and machine learning providers</strong> — for processing photos and generating personalised analysis and recommendations. Photos submitted for analysis may be transmitted to these providers for processing; however, they are not used to train third-party AI models.</span>
+              <span><strong class="text-text">Who the data is sent to:</strong> Your data is sent to <strong class="text-text">OpenAI</strong> (<a href="https://openai.com/policies/privacy-policy" class="font-medium text-primary underline decoration-primary/30 hover:decoration-primary" target="_blank" rel="noopener noreferrer">OpenAI Privacy Policy</a>) for the sole purpose of generating your personalised analysis and recommendations.</span>
             </li>
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#8226;</span>
-              <span><strong class="text-text">Analytics providers</strong> — for understanding aggregated usage patterns to improve the Service. No personally identifiable information is shared for analytics purposes.</span>
+              <span><strong class="text-text">Your permission:</strong> The app requests your permission before transmitting any personal data to OpenAI. You may decline, in which case the analysis feature will not be available.</span>
             </li>
           </ul>
           <p class="mt-3 leading-relaxed text-text-light">
-            We do not sell, rent, or trade your personal information to any third party for marketing or advertising purposes.
+            Your continued use of the analysis features after providing consent constitutes ongoing agreement to share data as described. You may withdraw consent at any time by ceasing to use the analysis features or by deleting your account.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-bold text-text">Third-Party Service Providers</h2>
+          <p class="mt-3 leading-relaxed text-text-light">
+            We work with trusted third-party service providers to deliver and support the Service. These providers are contractually bound to use your data only for the purposes we specify and to provide the same or equivalent level of data protection as described in this Privacy Policy. They include:
+          </p>
+          <ul class="mt-3 space-y-2 text-text-light">
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#8226;</span>
+              <span><strong class="text-text">Cloud infrastructure and database providers</strong> — for secure data storage and authentication with industry-standard access controls. Account data, conversation history, and preferences are stored using encrypted databases with row-level security.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#8226;</span>
+              <span><strong class="text-text">OpenAI (AI and machine learning service provider)</strong> — We use <strong class="text-text">OpenAI</strong> (<a href="https://openai.com/policies/privacy-policy" class="font-medium text-primary underline decoration-primary/30 hover:decoration-primary" target="_blank" rel="noopener noreferrer">OpenAI Privacy Policy</a>) to process photos you submit and generate personalised skin, hair, and makeup analysis. When you use an analysis feature, your photo (which may contain face data) and accompanying text context are transmitted to OpenAI over an encrypted connection. Our agreement with OpenAI includes the following binding protections:<br /><br />
+                — OpenAI processes your data in real-time and <strong class="text-text">does not retain, store, or log</strong> your photos, face data, or personal information after the analysis response is generated.<br />
+                — Your data is <strong class="text-text">never used by OpenAI to train, fine-tune, or improve</strong> any AI model or service.<br />
+                — OpenAI is contractually prohibited from sharing your data with any other party.<br />
+                — All data submitted through our Service falls under OpenAI's zero-data-retention API policy.<br />
+                — OpenAI is required to maintain security protections equivalent to or exceeding those described in this policy.<br /><br />
+                Note: For Skin Analysis, Chitti stores your photos securely on our own encrypted infrastructure for the duration of your account to enable historical tracking. For Makeup Analysis, Chitti stores your photos securely for up to 7 days on our own encrypted infrastructure to support the analysis workflow. In both cases, OpenAI does not retain images beyond each individual processing request.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#8226;</span>
+              <span><strong class="text-text">Analytics providers</strong> — for understanding aggregated usage patterns to improve the Service. No personally identifiable information, photos, or face data is shared for analytics purposes.</span>
+            </li>
+          </ul>
+          <p class="mt-3 leading-relaxed text-text-light">
+            We do not sell, rent, or trade your personal information to any third party for marketing or advertising purposes. No third party other than those listed above receives your personal data.
           </p>
         </div>
 
         <div>
           <h2 class="text-xl font-bold text-text">Data Security</h2>
           <p class="mt-3 leading-relaxed text-text-light">
-            We take the security of your data seriously and implement appropriate technical and organisational measures to protect it:
+            Protecting your data — especially your photos and face data — is a top priority. We implement multiple layers of security to ensure your personal information is protected at every stage:
           </p>
           <ul class="mt-3 space-y-2 text-text-light">
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#10003;</span>
-              <span>All data is encrypted in transit (TLS 1.3) and at rest.</span>
+              <span><strong class="text-text">Encryption in transit:</strong> All data transmitted between your device, our servers, and OpenAI is encrypted using TLS 1.3, the strongest widely available transport encryption standard.</span>
             </li>
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#10003;</span>
-              <span>Database access is restricted using row-level security policies, ensuring your data is accessible only to you.</span>
+              <span><strong class="text-text">Encryption at rest:</strong> All stored data — including photos, account information, and conversation history — is encrypted at rest using AES-256 encryption.</span>
             </li>
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#10003;</span>
-              <span>Image processing uses time-expiring signed URLs. Our backend does not store or proxy raw image data.</span>
+              <span><strong class="text-text">Row-level security:</strong> Database access is enforced through row-level security policies, ensuring your data is accessible only to your authenticated account. No other user or staff member can access your photos or personal data.</span>
             </li>
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#10003;</span>
-              <span>We regularly review our security practices and update them as necessary to address emerging threats.</span>
+              <span><strong class="text-text">Time-expiring access:</strong> When photos are processed, they are accessed via short-lived, signed URLs that automatically expire within minutes. Our backend does not store or proxy raw image data.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#10003;</span>
+              <span><strong class="text-text">Automatic deletion:</strong> Makeup Analysis photos are automatically and permanently deleted after 7 days. Vibe Check photos are never stored. These deletion processes are automated and require no action from you.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#10003;</span>
+              <span><strong class="text-text">No logging of sensitive data:</strong> Photos, face data, and personally identifiable content are never written to application logs, error reports, or analytics systems.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#10003;</span>
+              <span><strong class="text-text">Regular security reviews:</strong> We regularly review and update our security practices to address emerging threats and maintain the highest standards of data protection.</span>
             </li>
           </ul>
           <p class="mt-3 leading-relaxed text-text-light">
-            While we strive to protect your personal information, no method of transmission or storage is completely secure. We cannot guarantee absolute security but are committed to maintaining industry-standard protections.
+            While no method of transmission or storage is completely secure, we are committed to maintaining protections that meet or exceed industry standards for the handling of sensitive personal data.
           </p>
         </div>
 
         <div>
           <h2 class="text-xl font-bold text-text">Data Retention</h2>
           <p class="mt-3 leading-relaxed text-text-light">
-            We retain your personal information only for as long as necessary to fulfil the purposes described in this policy or as required by applicable law. Photos submitted for analysis are processed in real-time and are not retained after the analysis is complete. Account data, conversation history, and preferences are retained for the duration of your account.
+            We retain your personal information only for as long as necessary to fulfil the purposes described in this policy or as required by applicable law:
+          </p>
+          <ul class="mt-3 space-y-2 text-text-light">
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#8226;</span>
+              <span><strong class="text-text">Photos and face data:</strong> Retention varies by feature. For Vibe Check, photos are processed in real-time and not retained. For Skin Analysis, photos are retained for the duration of your account to enable historical tracking and are permanently deleted upon account deletion. For Makeup Analysis, photos are stored securely for up to 7 days, after which they are automatically and permanently deleted. OpenAI does not retain photos or face data beyond each individual processing request in any case.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#8226;</span>
+              <span><strong class="text-text">Account data:</strong> Your phone number, display name, and region preference are retained for as long as your account is active.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#8226;</span>
+              <span><strong class="text-text">Conversation history and preferences:</strong> Retained for the duration of your account so you can access past recommendations.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#8226;</span>
+              <span><strong class="text-text">Product data:</strong> Retained for the duration of your account.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#8226;</span>
+              <span><strong class="text-text">Usage data:</strong> Aggregated, de-identified usage data may be retained indefinitely for service improvement purposes. This data cannot be used to identify you.</span>
+            </li>
+          </ul>
+          <p class="mt-3 leading-relaxed text-text-light">
+            When you delete your account, all personally identifiable data — including account information, conversation history, product data, and preferences — is permanently deleted within 30 days. See "Account Deletion" below for details.
           </p>
         </div>
 
@@ -154,15 +287,49 @@ import PageLayout from '../layouts/PageLayout.astro';
             </li>
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#8226;</span>
-              <span><strong class="text-text">Data deletion:</strong> You may request deletion of your account and all associated data by contacting us at <a href="mailto:privacy@chitti.me" class="font-medium text-primary underline decoration-primary/30 hover:decoration-primary">privacy@chitti.me</a>. Upon receiving your request, we will permanently delete your profile, conversations, product data, and preferences within 30 days. This action is irreversible.</span>
+              <span><strong class="text-text">Account deletion:</strong> You can delete your account directly from within the app by navigating to your profile settings and selecting "Delete Account." You may also request deletion by contacting us at <a href="mailto:privacy@chitti.me" class="font-medium text-primary underline decoration-primary/30 hover:decoration-primary">privacy@chitti.me</a>. See "Account Deletion" below for full details.</span>
             </li>
             <li class="flex gap-2">
               <span class="mt-1 text-primary">&#8226;</span>
-              <span><strong class="text-text">Withdraw consent:</strong> You may stop using the Service at any time. Where we rely on your consent to process data, you may withdraw it by contacting us.</span>
+              <span><strong class="text-text">Withdraw consent:</strong> You may stop using the Service at any time. Where we rely on your consent to process data (such as consent to share photos with OpenAI), you may withdraw it by ceasing to use the relevant feature or by deleting your account.</span>
             </li>
           </ul>
           <p class="mt-3 leading-relaxed text-text-light">
             To exercise any of these rights, please contact us using the details provided below.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-bold text-text">Account Deletion</h2>
+          <p class="mt-3 leading-relaxed text-text-light">
+            You may permanently delete your account at any time directly from within the app. To do so, navigate to your profile settings and select "Delete Account." You will be asked to confirm your decision before the deletion is processed.
+          </p>
+          <p class="mt-3 leading-relaxed text-text-light">
+            Upon confirmation, the following actions are taken:
+          </p>
+          <ul class="mt-3 space-y-2 text-text-light">
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#10003;</span>
+              <span>Your account and authentication credentials are permanently deleted.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#10003;</span>
+              <span>All conversation history, product data, preferences, and profile information are permanently deleted.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#10003;</span>
+              <span>Deletion is completed within 30 days of your request.</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 text-primary">&#10003;</span>
+              <span>This action is irreversible. Once your account is deleted, your data cannot be recovered.</span>
+            </li>
+          </ul>
+          <p class="mt-3 leading-relaxed text-text-light">
+            Note: For Vibe Check, photos are never stored, so there is no photo data to delete. For Skin Analysis, all stored photos are permanently deleted as part of account deletion. For Makeup Analysis, any photos still within the 7-day retention window are permanently deleted immediately upon account deletion. Aggregated, de-identified usage data that cannot be linked to you may be retained for service improvement purposes.
+          </p>
+          <p class="mt-3 leading-relaxed text-text-light">
+            If you are unable to access the app, you may also request account deletion by emailing <a href="mailto:privacy@chitti.me" class="font-medium text-primary underline decoration-primary/30 hover:decoration-primary">privacy@chitti.me</a> from the phone number or email associated with your account.
           </p>
         </div>
 
